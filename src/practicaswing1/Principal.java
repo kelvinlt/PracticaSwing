@@ -396,6 +396,10 @@ public class Principal extends javax.swing.JFrame {
             
         }
         
+        //ejemplo de meter una arralist a un comboBox
+        //List<String> ls = new ArrayList<String>(); 
+        //jComboBox.setModel(new DefaultComboBoxModel(ls.toArray()));
+        
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jComboBox6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox6ActionPerformed
