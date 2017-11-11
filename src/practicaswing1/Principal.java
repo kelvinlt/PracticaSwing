@@ -424,9 +424,10 @@ public class Principal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_jTextField1ActionPerformed
-
+    
+    //Añadir una nueva prenda
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         int codigo = Integer.parseInt(jTextField1.getText());
         
@@ -460,6 +461,7 @@ public class Principal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
+    //Botton search, se usa para hacer busquedas
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         prendasSearch.clear();
         codigosSearch.clear();
@@ -484,15 +486,15 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jComboBox6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox6ActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jComboBox6ActionPerformed
 
     private void jComboBox5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox5ActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jComboBox5ActionPerformed
 
+    //cada vez que selecciona un codigo, el stock cambiara acorde a su numero de stock
     private void jComboBox4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox4ActionPerformed
-        //cada vez que selecciona un codigo, el stock cambiara acorde a su numero de stock
         int codigo = Integer.parseInt(jComboBox4.getSelectedItem().toString());
         int stockNum = 0;
         for(Prenda i : clothes){
@@ -503,9 +505,9 @@ public class Principal extends javax.swing.JFrame {
         jSpinner4.setValue(stockNum);
     }//GEN-LAST:event_jComboBox4ActionPerformed
 
+    //Guardado de cambios de stock del objecto selecionado
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        //save cambios de stock
-        int stock = (Integer) jSpinner4.getValue();
+         int stock = (Integer) jSpinner4.getValue();
         int code = Integer.parseInt(jComboBox4.getSelectedItem().toString());
         for(Prenda i : clothes){
             if(i.getCodigo() == code){
@@ -516,12 +518,14 @@ public class Principal extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jButton4ActionPerformed
 
+    //Botton para atras en lista
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         actual -= 1 ;
         insertarBusqueda(actual);
         checkPosicion(actual);
     }//GEN-LAST:event_jButton5ActionPerformed
 
+    //Botton para delaten en lista
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         actual += 1 ;
         insertarBusqueda(actual);
