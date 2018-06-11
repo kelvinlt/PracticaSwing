@@ -487,16 +487,19 @@ public class Principal extends javax.swing.JFrame {
                 codigosSearch.add(i.getCodigo());
             }
         } else {
-            
+
             for (Prenda i : clothes) {
-                if (i.getColor().equals(bColor) && i.getTalla().equals(bTalla)) {
-                    prendasSearch.add(i);
-                    codigosSearch.add(i.getCodigo());
+                if (i.getColor() != null && !i.getColor().equals("")) {
+                    if (i.getColor().equals(bColor) && i.getTalla().equals(bTalla)) {
+                        prendasSearch.add(i);
+                        codigosSearch.add(i.getCodigo());
+                    } else {
+                        System.out.println("No se ha encontrado nada");
+                    }
                 } else {
                     System.out.println("No se ha encontrado nada");
                 }
             }
-
         }
 
         insertarBusqueda(actual);
