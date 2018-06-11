@@ -490,11 +490,11 @@ public class Principal extends javax.swing.JFrame {
 
             for (Prenda i : clothes) {
                 if (i.getColor() != null && !i.getColor().equals("")) {
-                    if (i.getColor().equals(bColor) && i.getTalla().equals(bTalla)) {
+                    if (!i.getColor().equals(bColor) && !i.getTalla().equals(bTalla)) {
+                       System.out.println("No se ha encontrado nada"); 
+                    } else {
                         prendasSearch.add(i);
                         codigosSearch.add(i.getCodigo());
-                    } else {
-                        System.out.println("No se ha encontrado nada");
                     }
                 } else {
                     System.out.println("No se ha encontrado nada");
